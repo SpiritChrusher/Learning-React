@@ -1,15 +1,23 @@
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 const Header = ({ title }) => {
+
+	const OnClick = () => {
+	console.log('Clicked')
+	}
+	
 	return (
-	<header class ='Headercont'>
+	<header className='header'>
 	<h1>{title}</h1>
+		<Button color= 'green' text='Add' 
+		onClick={OnClick}/>
 	</header>
 	)
 }
 
 Header.defaultProps = {
-	title: 'Task Tracker',
+	title: 'My Task Tracker',
 }
 
 Header.propTypes = {
